@@ -1,0 +1,24 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="rwoUEOTXMhwt4zP6Pt6f">
+    <mxGraphModel dx="1392" dy="1062" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="N8IcUml26geumda0kdiI-3" edge="1" parent="1" source="N8IcUml26geumda0kdiI-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#23445D;defaultLabelBackgroundColor=page;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeWidth=4;curved=0;flowAnimation=0;" target="N8IcUml26geumda0kdiI-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N8IcUml26geumda0kdiI-4" connectable="0" parent="N8IcUml26geumda0kdiI-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=15;" value="1: N" vertex="1">
+          <mxGeometry relative="1" x="-0.0952" y="-2" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N8IcUml26geumda0kdiI-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;fontSize=15;" value="&lt;div&gt;customer&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;customer_id (PK)&lt;/div&gt;&lt;div&gt;customer_first_name&lt;/div&gt;&lt;div&gt;customer_last_name&lt;/div&gt;&lt;div&gt;customer_postal_code&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="280" x="60" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="N8IcUml26geumda0kdiI-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#001DBC;fillColor=#0050ef;fontColor=#ffffff;fontSize=16;" value="&lt;div&gt;customer_purchases&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;product_id&lt;/div&gt;&lt;div&gt;vendor_id&lt;/div&gt;&lt;div&gt;market_date&lt;/div&gt;&lt;div&gt;customer_id (FK)&lt;/div&gt;&lt;div&gt;quantity&lt;/div&gt;&lt;div&gt;cost_per_quantity&lt;/div&gt;&lt;div&gt;transaction_time&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="290" x="520" y="290" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
