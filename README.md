@@ -72,14 +72,14 @@ There are two assignments.
 **Questions can be submitted to the #questions channel on Slack**
 
 * Technical Facilitator:   
-  * **Thomas Rosenthal** (he/him)  
-    [thomas.rosenthal@utoronto.ca](mailto:thomas.rosenthal@utoronto.ca)
+  * **Justin(Jiazhou) Bi** (he/him)  
+    [justin.bi@mail.utoronto.ca](mailto:justin.bi@mail.utoronto.ca)
 
 * Learning Support Staff:
-  * **Anjali Shrivastava** (she/her)  
-  [anju_shrivastava@yahoo.com](mailto:anju_shrivastava@yahoo.com)
-  * **Dmytro Bonislavskyi** (he/him)  
-  [dmytro.bonislavskyi@gmail.com](mailto:dmytro.bonislavskyi@gmail.com)
+  * **Niyaz Nazari** (she/her)  
+  [niyaz.mnazari@gmail.com](mailto:niyaz.mnazari@gmail.com)
+  * **Kasra Vakiloroayaei** (he/him)  
+  [vakiloroayaei.kasra@gmail.com](mailto:vakiloroayaei.kasra@gmail.com)
   * **Sergii Khomych** (he/him)  
   [svkhomich1@gmail.com](mailto:svkhomich1@gmail.com)
 
@@ -117,13 +117,13 @@ Before First Live Learning Session: Install & Pre-Session [Setup](./05_src/sql/s
 
 ### Microcredential
 
-||Day 1|Day 2|Day 3|Day 4|Day 5|
-|---|---|---|---|---|---|
-|Week 1|Live Learning Session 1 Introduction: Data Modelling, Schema Design, Data Structures |Live Learning Session 2 Building Queries: SELECT, FROM, WHERE, CASE, DISTINCT, JOINs|Live Learning Session 3 Essential Techniques: Aggregation Functions, Subqueries, Temporary Tables, CTEs, Datetime Functions |Work Period 1|Work Period 2|
+||Day 1|Day 2|Day 3|Day 4|
+|---|---|---|---|---|
+|Week 1|Live Learning Session 1 Introduction: Data Modelling, Schema Design, Data Structures |Live Learning Session 2 Building Queries: SELECT, FROM, WHERE, CASE, DISTINCT, JOINs|Live Learning Session 3 Essential Techniques: Aggregation Functions, Subqueries, Temporary Tables, CTEs, Datetime Functions |Work Period 1|
 
-||Day 1|Day 2|Day 3|Day 4|Day 5|
-|---|---|---|---|---|---|
-|Week 2|Live Learning Session 4 Advanced Techniques: NULL Management, Windowed Functions, String Manipulation, UNION & UNION ALL, INTERSECT & EXCEPT  |Live Learning Session 5 Expanding your Database: INSERT, UPDATE, DELETE, Importing & Exporting Data, CROSS & Self Joins, Views   |Live Learning Session 6 Beyond SQL: Ethics and Case Study |Work Period 1|Work Period 2|
+||Day 1|Day 2|Day 3|Day 4|
+|---|---|---|---|---|
+|Week 2|Live Learning Session 4 Advanced Techniques: NULL Management, Windowed Functions, String Manipulation, UNION & UNION ALL, INTERSECT & EXCEPT  |Live Learning Session 5 Expanding your Database: INSERT, UPDATE, DELETE, Importing & Exporting Data, CROSS & Self Joins, Views   |Live Learning Session 6 Beyond SQL: Ethics and Case Study |Work Period 1|
 
 ## Requirements
 

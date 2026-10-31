@@ -20,8 +20,13 @@ VALUES(1,'Thomas',3)
 
 SELECT * FROM TEMP.employees;
 
-SELECT e.emp_name, m.emp_name as mgr_name -- rename the column so its possible to understand which is parent/child
-FROM temp.employees e
-LEFT JOIN temp.employees m
-	ON e.mgr_id = m.emp_id -- identifies which id is parent and which id is child
+SELECT e.emp_name, m.emp_name as mgr_name -- rename the column so its possible to understand the structure
+,coalesce(m.emp_name,e.emp_name) as self_boss -- if you want Rohan to be his own boss
+
+FROM temp.employees as e
+LEFT JOIN temp.employees as m
+	ON e.mgr_id = m.emp_id -- identifying which id is the parent and which id is the child
+
+
+
 

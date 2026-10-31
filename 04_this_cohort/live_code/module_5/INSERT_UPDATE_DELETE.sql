@@ -14,20 +14,18 @@ INSERT INTO product_expanded
 VALUES(24,'Almonds','1 lb',3,'lbs');
 
 
-
 /* 2. change the product_size for THAT product */
 --UPDATE
 UPDATE product_expanded
-SET product_name = NULL, product_size = NULL, product_category_id = NULL, product_qty_type = NULL
+SET product_size = '.5 kg', product_qty_type = 'kg'
+WHERE product_id = 24;
+
+/* 3. delete the newly added product */
+--DELETE
+
+DELETE FROM product_expanded
+--SELECT * FROM product_expanded -- helping you determine which rows you are looking at, are they the right rows before you delete it?
 WHERE product_id = 24;
 
 
-/* 3. delete the newly added product */
-
-DELETE FROM product_expanded
---SELECT * FROM product_expanded -- can help you determine you are looking  at the right rows before running a deletion
-WHERE product_id = 24 ;
-
-
-SELECT * FROM product_expanded
 --------------------------------------------------------------------------------------------------------------------------------------------

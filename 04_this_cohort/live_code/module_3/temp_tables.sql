@@ -14,25 +14,18 @@ DROP TABLE IF EXISTS temp.new_vendor_inventory;
 CREATE TABLE temp.new_vendor_inventory AS
 
 -- definition of the table
-SELECT *,
-original_price*5 as inflation
-FROM vendor_inventory
-
-
-
+SELECT * 
+,original_price*5 as inflation
+FROM vendor_inventory;
 
 
 /* 2. put the previous table into another temp table, e.g. as temp.new_new_vendor_inventory  */
-
 DROP TABLE IF EXISTS temp.new_new_vendor_inventory;
 CREATE TABLE temp.new_new_vendor_inventory AS
 
-SELECT *
-,inflation * 2 as super_inflation
+SELECT * 
+,inflation*2 as SUPER_INFLATION
 FROM temp.new_vendor_inventory
 
 
-
 --------------------------------------------------------------------------------------------------------------------------------------------
-
-SELECT * FROM temp.new_new_vendor_inventory

@@ -11,7 +11,7 @@ CREATE VIEW IF NOT EXISTS vendor_daily_sales AS
 	,market_week
 	,market_year
 	,vendor_name 
-	,SUM(quantity*cost_to_customer_per_qty) as sales
+	,SUM(quantity*cost_per_quantity) as sales
 	
 	
 	FROM market_date_info md
@@ -19,6 +19,8 @@ CREATE VIEW IF NOT EXISTS vendor_daily_sales AS
 		ON md.market_date = cp.market_date
 	INNER JOIN vendor v
 		ON cp.vendor_id = v.vendor_id
+	
+	WHERE market_date = DATE('now','localtime')
 		
 	GROUP BY cp.market_date, v.vendor_id;
 

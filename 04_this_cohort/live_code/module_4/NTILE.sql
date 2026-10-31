@@ -3,12 +3,14 @@
 
 
 /* 1. Calculate quartile, quntiles, and percentiles from vendor daily sales */
-SELECT * 
+SELECT *
 ,NTILE(4) OVER (PARTITION BY vendor_name ORDER BY sales ASC) as [quartile]
 ,NTILE(5) OVER (PARTITION BY vendor_name ORDER BY sales ASC) as [quintile]
 ,NTILE(100) OVER (PARTITION BY vendor_name ORDER BY sales ASC) as [percentile]
+--,PERCENT_RANK OVER(...) -- maybe better for field of corn, not having 100 buckets to split into 
 
 FROM (
+
 -- vendor daily sales 
 	SELECT 
 	md.market_date
@@ -16,7 +18,7 @@ FROM (
 	,market_week
 	,market_year
 	,vendor_name
-	,SUM(quantity*cost_to_customer_per_qty) AS sales
+	,SUM(quantity*cost_per_quantity) AS sales
 
 	FROM customer_purchases AS cp
 	JOIN market_date_info AS md
@@ -25,6 +27,6 @@ FROM (
 		ON v.vendor_id = cp.vendor_id
 		
 	GROUP BY cp.market_date, v.vendor_id
-) x
 
+) x
 --------------------------------------------------------------------------------------------------------------------------------------------

@@ -3,8 +3,9 @@
 
 
 /* 1. SET market_date equal to today for new_customer_purchases */
+
 UPDATE new_customer_purchases
-SET market_date = DATE('now');
+SET market_date = DATE('now','localtime')
 
 
 
@@ -20,9 +21,8 @@ INSERT INTO market_date_info
 VALUES('....','....','....','....','8:00 AM','2:00 PM','nothing interesting','Summer','25','28',0,0);
 
 */
-INSERT INTO market_date_info
-VALUES('2026-04-06','Monday','15','2026','8:00 AM','2:00 PM','nothing','Spring','0','6',1,0)
  
-
+INSERT INTO market_date_info
+VALUES('2026-08-05','Wednesday','32','2026','8:00 AM','2:00 PM','nothing interesting','Summer','25','28',0,0)
 
 --------------------------------------------------------------------------------------------------------------------------------------------

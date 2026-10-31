@@ -28,18 +28,18 @@ VALUES("tiger",2),
 	("superhero", 5);
 
 SELECT s1.costume, s1.quantity as store1_quantity, s2.quantity as store2_quantity
-FROM store1 s1
-LEFT JOIN store2 s2
+FROM store1 as s1
+LEFT JOIN store2 as s2
 	ON s1.costume = s2.costume
 	
 UNION ALL
-	
-SELECT 
-s2.costume, s1.quantity, s2.quantity	
+
+SELECT s2.costume, s1.quantity, s2.quantity
+
 FROM store2 s2
 LEFT JOIN store1 s1
 	ON s1.costume = s2.costume
-WHERE s1.costume IS NULL	
+WHERE s1.costume IS NULL
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
