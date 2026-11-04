@@ -57,7 +57,27 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1 SCD: Overwriting Customer Addresses
+
+The first architecture uses a Type 1 Slowly Changing Dimension (SCD), in which a customer's previous address is overwritten whenever their address changes.
+
+The CUSTOMER_ADDRESS table would contain customer_id (both primary key and foreign key), street_address, city, province, and postal_code. Each customer would have one address record, which is updated whenever they move.
+
+This approach is relatively simple and efficient because it only stores the customer's current address. Yet, it does not preserve historical information, meaning previous addresses cannot be retrieved from this table.
+
+Type 2 SCD: Retaining Customer Address History
+
+The second architecture uses a Type 2 Slowly Changing Dimension, which preserves historical address changes by creating a new record whenever a customer updates their address.
+
+The CUSTOMER_ADDRESS table would include address_id (primary key), customer_id (foreign key), street_address, city, province, postal_code, valid_from, valid_to, and is_current.
+
+For instance, if a customer moves from Toronto to Vancouver, their Toronto address would remain in the database with an ending validity date, while a new record would be created for their Vancouver address. The new record would be marked as current.
+
+This architecture allows the bookstore to track historical changes and conduct analyses over time. However, it requires more storage and more complex queries. Retaining previous addresses also introduces additional privacy and data-retention considerations.
+
+Comparison
+
+Type 1 is more appropriate when the bookstore only needs a customer's current address, such as for deliveries. While Type 2 is useful when historical address information is necessary for auditing or legitimate business analysis. The choice depends on the bookstore's operational requirements and how long it needs to retain customer information.
 ```
 
 ***
@@ -192,6 +212,18 @@ Read: Boykis, V. (2019, October 16). _Neural nets are just people all the way do
 Consider, for example, concepts of labour, bias, LLM proliferation, moderating content, intersection of technology and society, ect. 
 
 
-```
-Your thoughts...
-```
+
+Vicki Boykis's (2019) article, Neural nets are just people all the way down, challenges the widespread assumption that artificial intelligence (AI) and machine learning operate as autonomous, objective technological systems. By tracing the human labour and decision-making processes underlying machine learning datasets, Boykis demonstrates that seemingly automated technologies are fundamentally dependent on human contributions. What I find particularly compelling about this argument is how it exposes the social and political dimensions of technologies often presented as neutral or independent of human intervention. The article raises several interconnected ethical concerns, particularly regarding invisible labour, algorithmic bias, the politics of classification, and accountability in AI development.
+
+One of the most significant ethical issues concerns the invisibility and undervaluation of human labour. Boykis begins with an analogy between garment manufacturing and machine learning, highlighting how supposedly automated processes continue to depend on extensive manual work. Her discussion of ImageNet illustrates how large-scale machine learning datasets rely on workers who manually label and categorize millions of images, including those recruited through Amazon Mechanical Turk. Although these datasets have enabled major advances in computer vision, the individuals responsible for producing them often receive little recognition or financial compensation relative to the economic and technological value their work generates. This raises questions about the unequal distribution of benefits within the AI industry. While technological innovation is frequently attributed to researchers, corporations, and sophisticated algorithms, the contributions of data annotators and other workers remain largely invisible. From an ethical perspective, recognizing this labour also requires considering fair compensation, working conditions, and workers' participation in decisions about the technologies they help produce.
+
+A second important concern involves the relationship between human classification and algorithmic bias. Boykis traces the development of ImageNet through earlier linguistic resources, including WordNet and the Brown Corpus, showing how contemporary machine learning systems inherit categories and classifications established through historical human decisions. This suggests that datasets are not simply neutral collections of information. Rather, they reflect particular cultural assumptions, institutional priorities, and ways of organizing knowledge. Decisions about what constitutes a category, which examples represent it, and how ambiguous cases should be classified inevitably involve interpretation. Consequently, biases embedded in these decisions can become reproduced and potentially amplified through machine learning systems.
+
+Boykis' discussion of ImageNet Roulette is a particularly revealing example. The project exposed how image recognition systems could assign inappropriate, offensive, or socially loaded labels to photographs of people. This demonstrates that algorithmic bias cannot be understood solely as a technical problem involving inaccurate predictions. Moreover, it concerns the social consequences of translating historically situated classifications into apparently objective computational judgments. Such classifications become especially troubling when deployed in contexts involving identity, surveillance, or access to institutional resources. The ethical question is therefore not only whether an algorithm produces accurate results, but also whose perspectives inform its categories, whose identities are misrepresented, and who bears the consequences of those decisions.
+
+These concerns have become increasingly relevant with the proliferation of large language models (LLMs) and generative AI. Although Boykis' article predates the contemporary expansion of these technologies, its central argument remains applicable. LLMs depend on extensive human-produced textual data, as well as human involvement in evaluating outputs and shaping model behaviour. Content moderation further complicates the idea of autonomous AI because judgments about harmful, inappropriate, or acceptable content are socially and culturally situated. What counts as offensive or legitimate expression may differ across linguistic, cultural, and political contexts. Consequently, moderation systems risk reproducing dominant norms while marginalizing perspectives that do not fit established classifications. This makes transparency and meaningful human oversight particularly important.
+
+Finally, the article raises broader questions about responsibility and accountability. If machine learning systems are built upon layers of human decisions, organizations developing and deploying these technologies cannot attribute harmful outcomes solely to algorithms or imperfect datasets. Ethical responsibility extends across the entire technological process, including data collection, classification, model development, deployment, and ongoing evaluation. Addressing these concerns requires more than correcting individual biases after they become visible. It involves critically examining the institutional structures and power relations that determine whose knowledge, labour, and experiences are incorporated into technological systems.
+
+For these reasons, Boykis's article encourages us to reconsider AI not as an independent technological force, but as a sociotechnical system shaped by human practices and social inequalities. In my view, the article's most important contribution is the recognition that technological advancement does not eliminate human responsibility. Instead, the increasing complexity and apparent autonomy of AI systems make it even more necessary and pressing to examine the people, institutions, and decisions that control and sustain them. Thus, a more ethical approach to AI must prioritize labour recognition, inclusive and critically examined data practices, and accountability for the social consequences of automated systems.
+
